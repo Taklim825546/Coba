@@ -1,0 +1,166 @@
+<!doctype html>
+
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Toko Buku — Portfolio &amp; Catalog</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="nav">
+        <div class="brand">
+          <div class="logo">TB</div>
+          <div>
+            <h1>TokoBuku</h1>
+            <div class="small muted">Digital profile & catalog</div>
+          </div>
+        </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#catalog">Produk</a></li>
+        <li><a href="#promo">Promo</a></li>
+        <li><a href="#contact">Kontak</a></li>
+        <li><button class="cta" id="open-cart">Lihat Pesanan</button></li>
+      </ul>
+      <button class="menu-btn cta" id="mobile-menu">Menu</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero / Landing -->
+  <section id="home" class="hero">
+    <div class="hero-panel">
+      <div class="eyebrow">Koleksi Terkurasi</div>
+      <h2 class="accent-underline">Masa depan membaca — klasik & pilihan kurator</h2>
+      <p>Nikmati tampilan katalog yang elegan, cepat, dan dirancang untuk pemilik toko yang ingin profil profesional tanpa ribet.</p>
+      <div class="search">
+        <input id="search" placeholder="Cari judul, pengarang, atau kategori" />
+        <button class="btn" onclick="doSearch()">Cari</button>
+      </div>
+      <div style="margin-top:16px" class="row">
+        <button class="btn" onclick="scrollTo('#catalog')">Lihat Produk</button>
+        <a href="#contact" class="muted">Atau hubungi kami untuk custom website</a>
+      </div>
+    </div>
+
+    <aside class="hero-side">
+      <div class="feature-card">
+        <div class="small">Statistik</div>
+        <div style="font-size:20px;font-weight:700">120+ Judul</div>
+        <div class="muted">Diperbarui mingguan</div>
+      </div>
+      <div class="feature-card">
+        <div class="small">Platform</div>
+        <div style="font-weight:700">Mobile + Desktop</div>
+        <div class="muted">Responsif & cepat</div>
+      </div>
+      <div class="feature-card small">
+        <div>Desain terinspirasi tampilan modern, panel kaca, dan aksen neon.</div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="about">
+      <div class="text hero-panel">
+        <h3>Tentang Toko</h3>
+        <p class="muted">Profil singkat toko: visi, jam operasional, dan jenis koleksi. Bagus untuk pemilik toko yang belum punya website — tampilkan identitas dan portofolio buku Anda di sini.</p>
+        <ul class="muted" style="margin-top:12px">
+          <li>Profil toko & lokasi</li>
+          <li>Galeri foto rak & penerbit</li>
+          <li>Daftar produk & harga</li>
+        </ul>
+      </div>
+
+      <div class="preview">
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='360'><rect width='100%' height='100%' fill='%23081418'/><text x='50%' y='50%' fill='%2377eef1' font-size='20' font-family='Inter' text-anchor='middle'>Preview Gallery</text></svg>" alt="preview">
+      </div>
+    </div>
+  </section>
+
+  <!-- Catalog -->
+  <section id="catalog">
+    <h3 style="margin-top:16px">Daftar Produk</h3>
+    <div class="grid" id="product-grid">
+      <!-- cards injected by JS -->
+    </div>
+  </section>
+  
+  <section id="produk" class="produk-section">
+  <h2>Daftar Produk</h2>
+
+  <!-- Promotions -->
+  <section id="promo" class="promo" style="margin-top:16px">
+    <div class="big hero-panel">
+      <h3>Promosi Spesial</h3>
+      <p class="muted">Diskon bundling untuk pemilik kedai, harga grosir untuk pemesanan perdana.</p>
+      <div style="margin-top:12px" class="row">
+        <div class="small muted">Flash sale: 20% off untuk 50 pembeli pertama</div>
+      </div>
+    </div>
+    <div class="side">
+      <div class="hero-panel small">
+        <strong>Bundling</strong>
+        <div class="muted">Pilih 5 buku, bayar 4</div>
+      </div>
+      <div class="hero-panel small">
+        <strong>Custom order</strong>
+        <div class="muted">Sediakan katalog untuk pemesanan khusus</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h3 style="margin-top:16px">Kontak</h3>
+    <div class="contact-grid">
+      <div class="hero-panel">
+        <form id="contact-form" onsubmit="submitContact(event)">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <input placeholder="Nama" required style="padding:10px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.03);color:inherit" />
+            <input type="email" placeholder="Email" required style="padding:10px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.03);color:inherit" />
+            <textarea placeholder="Pesan singkat" rows="5" style="padding:10px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.03);color:inherit"></textarea>
+            <div style="display:flex;gap:8px;justify-content:flex-end"><button class="btn" type="submit">Kirim</button></div>
+          </div>
+        </form>
+      </div>
+      <div class="hero-panel small">
+        <div><strong>Alamat</strong><div class="muted">Jalan Contoh No.1 — Kota</div></div>
+        <div style="margin-top:12px"><strong>Telepon</strong><div class="muted">+62 8xx-xxxx-xxxx</div></div>
+        <div style="margin-top:12px"><strong>Jam</strong><div class="muted">Senin — Jumat, 09:00 — 18:00</div></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div>
+    <div style="font-weight:700">TokoBuku</div>
+    <div class="muted">Portofolio &amp; katalog untuk pemilik toko</div>
+  </div>
+  <div class="muted">© 2025 TokoBuku</div>
+</footer>
+
+  </div>  <!-- Cart modal -->  <div class="cart-modal" id="cart-modal">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+      <strong>Pesanan</strong><button onclick="toggleCart()" class="small muted">Tutup</button>
+    </div>
+    <div id="cart-items"></div>
+    <div style="display:flex;justify-content:space-between;margin-top:12px"><div class="muted">Total</div><div id="cart-total" style="font-weight:800">Rp0</div></div>
+    <div style="margin-top:12px;display:flex;justify-content:flex-end"><button class="btn" onclick="checkout()">Checkout</button></div>
+  </div>
+  
+  <script src="js/script.js">
+  </script>
+  
+  </body>
+</html>
