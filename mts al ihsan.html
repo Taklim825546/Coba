@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTs Al Ihsan Tukdana | Modern & Futuristic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#059669',
+                        darkBg: '#0f172a',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .dark .glass {
+            background: rgba(15, 23, 42, 0.8);
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero.png'); /* Ganti dengan Gambar 6 Anda */
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-900 dark:bg-darkBg dark:text-white transition-colors duration-300">
+
+
+<!--navbar-->
+   <nav class="fixed w-full z-50 glass transition-all duration-300 py-4">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+        
+        <div class="flex items-center gap-3">
+            <img src="logo.png" alt="Logo" class="w-10 h-10 rounded-full border-2 border-primary">
+            <span id="nav-title" class="text-xl font-bold tracking-tighter uppercase transition-colors duration-300 text-white">
+                MTs Al Ihsan
+            </span>
+        </div>
+
+        <div id="nav-links" class="hidden md:flex gap-8 font-medium text-white">
+            <a href="#home" class="hover:text-primary transition">Home</a>
+            <a href="#about" class="hover:text-primary transition">About</a>
+            <a href="#ppdb" class="hover:text-primary transition">PPDB</a>
+            <a href="#guru" class="hover:text-primary transition">Guru</a>
+            <a href="#contact" class="hover:text-primary transition">Contact</a>
+        </div>
+
+        <div id="mobile-nav-actions" class="flex items-center gap-2 md:gap-4 text-white">
+            <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition">
+                <i id="theme-icon" class="fas fa-moon text-xl"></i>
+            </button>
+            <button id="menu-btn" class="md:hidden p-2 text-2xl focus:outline-none">
+                <i id="menu-icon" class="fas fa-bars"></i>
+            </button>
+        </div>
+
+    </div>
+    
+     <div id="mobile-menu" class="hidden opacity-0 md:hidden bg-white/95 dark:bg-darkBg/95 backdrop-blur-lg transition-all duration-500 ease-in-out overflow-hidden">
+        <div class="px-6 py-6 space-y-4 shadow-xl flex flex-col text-slate-900 dark:text-white">
+            <a href="#home" class="mobile-link hover:text-primary transition font-medium">Home</a>
+            <a href="#about" class="mobile-link hover:text-primary transition font-medium">About</a>
+            <a href="#ppdb" class="mobile-link hover:text-primary transition font-medium">PPDB</a>
+            <a href="#guru" class="mobile-link hover:text-primary transition font-medium">Guru</a>
+            <a href="#contact" class="mobile-link hover:text-primary transition font-medium">Contact</a>
+        </div>
+    </div>
+
+</nav>
+
+
+
+        <!--hero-->
+    <section id="home" class="hero-bg h-screen flex items-center justify-center text-center px-6">
+        <div class="max-w-4xl" data-aos="fade-up">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">Membentuk Generasi <span class="text-primary">Berteknologi & Berakhlak</span></h1>
+            <p class="text-gray-200 text-lg mb-8">Selamat Datang di MTs Al Ihsan Tukdana. Kampus Emas untuk masa depan cemerlang putra-putri Anda.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#ppdb" class="bg-primary hover:bg-green-600 text-white px-8 py-3 rounded-full font-bold transition transform hover:scale-105">Daftar Sekarang</a>
+                <a href="#about" class="glass text-white px-8 py-3 rounded-full font-bold hover:bg-white/20 transition">Pelajari Lebih Lanjut</a>
+            </div>
+        </div>
+    </section>
+
+
+        <!--about-->
+    <section id="about" class="py-20 container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-6 border-l-4 border-primary pl-4">Tentang Kami</h2>
+                <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                    MTs Al Ihsan Tukdana adalah institusi pendidikan yang berfokus pada integrasi teknologi modern dengan nilai-nilai keislaman yang kuat. Kami percaya setiap siswa memiliki potensi emas yang perlu diasah.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-4 glass rounded-xl border border-primary/20">
+                        <h4 class="font-bold text-primary text-2xl">Akreditasi</h4>
+                        <p>B (Sangat Baik)</p>
+                    </div>
+                    <div class="p-4 glass rounded-xl border border-primary/20">
+                        <h4 class="font-bold text-primary text-2xl">Fasilitas</h4>
+                        <p>Lengkap & Modern</p>
+                    </div>
+                </div>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-2xl rotate-2">
+                <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3" alt="Sekolah" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+
+
+        <!--ppdb-->
+    <section id="ppdb" class="py-20 bg-slate-100 dark:bg-slate-900/50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-center text-4xl font-bold mb-16">Penerimaan Peserta Didik Baru</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="group relative overflow-hidden rounded-3xl shadow-2xl">
+                    <img src="poster.png" alt="Poster PPDB" class="w-full transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8 text-white">
+                        <h3 class="text-2xl font-bold">Tahun Ajaran 2025/2026</h3>
+                        <p>Segera bergabung bersama kami!</p>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-3xl shadow-xl border border-white/20">
+                    <h3 class="text-2xl font-bold mb-6 italic text-primary">Kirim Pesan Minat</h3>
+                    <form onsubmit="kirimKeWhatsApp(event)" class="space-y-4">
+    <div>
+        <label class="block mb-2 font-medium">Nama Lengkap Siswa</label>
+        <input id="nama-siswa" required type="text" class="w-full p-3 rounded-xl bg-white/50 dark:bg-slate-800 border border-gray-300 dark:border-slate-700 outline-none focus:border-primary transition" placeholder="Contoh: Ahmad Fauzi">
+    </div>
+    <div>
+        <label class="block mb-2 font-medium">Asal Sekolah</label>
+        <input id="asal-sekolah" required type="text" class="w-full p-3 rounded-xl bg-white/50 dark:bg-slate-800 border border-gray-300 dark:border-slate-700 outline-none focus:border-primary" placeholder="Nama SD/MI">
+    </div>
+    <div>
+        <label class="block mb-2 font-medium">Nomor WhatsApp</label>
+        <input id="nomor-wa" required type="number" class="w-full p-3 rounded-xl bg-white/50 dark:bg-slate-800 border border-gray-300 dark:border-slate-700 outline-none focus:border-primary" placeholder="08xxxxxx">
+    </div>
+    <button type="submit" class="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-primary/50 transition">KIRIM FORMULIR</button>
+</form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+        <!--card guru-->
+    <section id="guru" class="py-20 container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-4">Tenaga Pengajar & Kursus Unggulan</h2>
+        <p class="text-gray-500 mb-12 max-w-2xl mx-auto">Kami menghadirkan instruktur ahli di bidang Robotika, Desain Grafis, dan IT untuk membekali siswa dengan keahlian masa depan.</p>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass p-6 rounded-3xl hover:-translate-y-2 transition duration-300">
+                <img src="https://via.placeholder.com/150" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-primary p-1">
+                <h4 class="text-xl font-bold uppercase">PA IKSAN</h4>
+                <p class="text-primary font-semibold mb-4">Ahli teknik informatika</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Pakar teknologi komputer.</p>
+            </div>
+            <div class="glass p-6 rounded-3xl hover:-translate-y-2 transition duration-300">
+                <img src="https://via.placeholder.com/150" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-primary p-1">
+                <h4 class="text-xl font-bold uppercase">PA MARDI</h4>
+                <p class="text-primary font-semibold mb-4">ahli ilmu sosial</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Membantu siswa mengeksplorasi kreativitas.</p>
+            </div>
+            <div class="glass p-6 rounded-3xl hover:-translate-y-2 transition duration-300">
+                <img src="https://via.placeholder.com/150" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-primary p-1">
+                <h4 class="text-xl font-bold uppercase">MR.INDRA</h4>
+                <p class="text-primary font-semibold mb-4">Mentor Coding</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Membangun logika pemrograman siswa sejak usia dini.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+        <!--contact-->
+    <section id="contact" class="py-20 bg-primary/10">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-3xl font-bold mb-6 italic">Hubungi Kami</h2>
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-primary p-4 rounded-2xl text-white"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4 class="font-bold uppercase text-sm tracking-widest text-primary">Alamat</h4>
+                            <p>Sukmulya pg 2 Tukdana, Indramayu, Jawa Barat</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="bg-primary p-4 rounded-2xl text-white"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <h4 class="font-bold uppercase text-sm tracking-widest text-primary">Telepon</h4>
+                            <p>+62 838-1851-0248</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="bg-primary p-4 rounded-2xl text-white"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4 class="font-bold uppercase text-sm tracking-widest text-primary">Surel</h4>
+                            <p>mtsalihsantukdana@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h-64 rounded-3xl overflow-hidden shadow-lg border-4 border-white">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d253851.81649450268!2d106.8302336!3d-6.2062592!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ec5007a1aad77%3A0xbf5246f6b7c559a6!2sMTs%20Al-Ihsan!5e0!3m2!1sid!2sid!4v1766890200617!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+
+
+        <!--footer-->
+    <footer class="bg-slate-900 text-gray-400 py-12 px-6">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-2">
+                    <h3 class="text-white text-2xl font-bold mb-4 uppercase italic">MTs Al Ihsan</h3>
+                    <p class="mb-4">Membangun masa depan pendidikan yang lebih baik dengan sentuhan teknologi dan akhlak karimah.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 glass rounded-full flex items-center justify-center hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 glass rounded-full flex items-center justify-center hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 glass rounded-full flex items-center justify-center hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase tracking-widest">Link Cepat</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-primary">Beranda</a></li>
+                        <li><a href="#about" class="hover:text-primary">Profil</a></li>
+                        <li><a href="#ppdb" class="hover:text-primary">PPDB</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Lokasi</h4>
+                    <img src="gedung.png" alt="Gedung Sekolah" class="rounded-xl opacity-50">
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                &copy; 2024 MTs Al Ihsan Tukdana. All rights reserved. Designed for Excellence.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- 1. SETUP VARIABEL ---
+        const html = document.documentElement;
+        
+        // Elemen Dark Mode
+        const themeBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        
+        // Elemen Mobile Menu
+        const menuBtn = document.getElementById('menu-btn');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        
+        // Elemen Scroll & Navbar
+        const navBar = document.querySelector('nav');
+        const navTitle = document.getElementById('nav-title');
+        const navLinks = document.getElementById('nav-links');
+        const navActions = document.getElementById('mobile-nav-actions'); // ID baru
+        const heroSection = document.getElementById('home');
+
+        // --- 2. FITUR DARK MODE ---
+        function initTheme() {
+            if (localStorage.getItem('theme') === 'dark') {
+                html.classList.add('dark');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            }
+        }
+        initTheme(); // Jalankan saat load
+
+        themeBtn.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            if (html.classList.contains('dark')) {
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // --- 3. FITUR MOBILE MENU ---
+        function toggleMenu() {
+            const isHidden = mobileMenu.classList.contains('hidden');
+
+            if (isHidden) {
+                // Buka Menu
+                mobileMenu.classList.remove('hidden');
+                setTimeout(() => {
+                    mobileMenu.classList.replace('opacity-0', 'opacity-100');
+                    mobileMenu.style.maxHeight = "500px";
+                }, 10);
+                menuIcon.classList.replace('fa-bars', 'fa-xmark');
+            } else {
+                // Tutup Menu
+                mobileMenu.classList.replace('opacity-100', 'opacity-0');
+                mobileMenu.style.maxHeight = "0px";
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 500);
+                menuIcon.classList.replace('fa-xmark', 'fa-bars');
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+
+        // Tutup menu otomatis saat link diklik
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Cek jika menu sedang terbuka, baru tutup
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // --- 4. FITUR UBAH WARNA SAAT SCROLL ---
+        function updateNavColors() {
+            // Cek apakah elemen hero ada (untuk mencegah error di halaman lain)
+            if (!heroSection) return;
+
+            const threshold = heroSection.offsetHeight - 100;
+            const isScrolled = window.scrollY > threshold;
+
+            // Daftar elemen yang perlu diubah warnanya
+            const elementsToChange = [navTitle, navLinks, navActions];
+
+            if (isScrolled) {
+                // -- KONDISI: DI BAWAH (Diluar Hero) --
+                navBar.classList.add('shadow-md');
+                
+                elementsToChange.forEach(el => {
+                    if (el) {
+                        el.classList.remove('text-white');
+                        // Jadi Hitam, tapi kalau Dark Mode jadi Putih
+                        el.classList.add('text-slate-900', 'dark:text-white'); 
+                    }
+                });
+            } else {
+                // -- KONDISI: DI ATAS (Dalam Hero) --
+                navBar.classList.remove('shadow-md');
+
+                elementsToChange.forEach(el => {
+                    if (el) {
+                        el.classList.add('text-white');
+                        // Hapus class warna lain supaya paksa Putih
+                        el.classList.remove('text-slate-900', 'dark:text-white');
+                    }
+                });
+            }
+        }
+
+        // Jalankan fungsi scroll
+        window.addEventListener('scroll', updateNavColors);
+        // Jalankan sekali saat loading agar warnanya pas sejak awal
+        updateNavColors();
+        
+        
+        // --- 5. FITUR KIRIM KE WHATSAPP (PPDB) ---
+        function kirimKeWhatsApp(event) {
+            event.preventDefault(); // Mencegah halaman refresh saat tombol ditekan
+
+            // 1. Ambil data dari input
+            const nama = document.getElementById('nama-siswa').value;
+            const sekolah = document.getElementById('asal-sekolah').value;
+            const wa = document.getElementById('nomor-wa').value;
+
+            // 2. Nomor Admin (Saya ambil dari footer kamu: 0838-1851-0248)
+            // Format harus 628... (tanpa 0 di depan)
+            const nomorAdmin = "6283818510248"; 
+
+            // 3. Buat template pesan
+            const pesan = `Halo Admin MTs Al Ihsan, saya berminat mendaftar.%0A%0A` +
+                          `📝 *Data Calon Siswa* %0A` +
+                          `Nama: ${nama}%0A` +
+                          `Asal Sekolah: ${sekolah}%0A` +
+                          `No. WA: ${wa}%0A%0A` +
+                          `Mohon infonya lebih lanjut. Terima kasih.`;
+
+            // 4. Buka WhatsApp
+            const url = `https://wa.me/${nomorAdmin}?text=${pesan}`;
+            window.open(url, '_blank');
+        }
+
+    </script>
+</body>
+</html>
